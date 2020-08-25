@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+       Value a <input type="text"  id="a">
+       Value b <input type="text"  id="b"><br><br>
+       <div style="display: inline-flex;">
+
+           <input type="button" id="btn" value="Get the answer">
+           <p id="status"></p>
+       </div>
+       
+       <script>
+           $(document).ready(function(){
+               
+               $("#btn").bind('click',add)
+
+           })
+           function add(){
+               var c = Number($("#a").val())+Number($("#b").val())
+            //    var c = $("#a").val()+$("#b").val()
+               $("#btn").val("The answer is")
+               $("#status").html(c)
+           }
+       </script>
+    </body>
+</html>

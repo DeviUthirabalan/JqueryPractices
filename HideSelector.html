@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <h1>Click the button to hide me!!</h1>
+        <h1>I'm Para2.Click the button to hide me!!</h1>
+        <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, est!</p>
+        <ul>
+            <li>Java</li>
+            <li>Sql</li>
+            <li>Spring</li>
+            <li>Hibernet</li>
+        </ul>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Angular</li>
+            <li>Jquery</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, accusantium.<a href="www.google.com" target="_blank">email</a></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, accusantium.<a href="www.facebook.com">facebook</a></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, accusantium.<a href="www.instagram.com">Instagram</a></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, accusantium.<a href="www.twitter.com" target="_blank">twitter</a></p>
+        Name<input type="text" name="" id=""><br><br>
+        <p id="LongPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nihil. In, consequatur magnam. Impedit quod nulla, laudantium, saepe iste temporibus alias earum deserunt architecto reprehenderit, minima sequi quae neque expedita in! Quisquam aspernatur hic modi corporis voluptates dicta, temporibus quos iste aliquam, consequatur vel accusamus commodi consequuntur natus deleniti pariatur magnam eligendi magni? Aliquid aut dignissimos enim facilis at excepturi autem, voluptatibus impedit, vero corporis veritatis adipisci eligendi recusandae officiis. Suscipit voluptate, quis dolorem, asperiores iusto repellat qui maxime corporis autem hic voluptatibus consequuntur dicta incidunt dolores harum quae at quam voluptatem ut, optio rem provident obcaecati quasi eius. Assumenda?</p>
+        <p id="shortPara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo earum pariatur illo reiciendis at, dicta sequi laudantium, ipsum dignissimos odio nam quia quod enim odit aut magni assumenda, porro expedita.</p>
+        <input type="button" id="ToggleShowHide" value="HideShortPara">
+        <button>Hide </button>
+        <button id="HideAll">Hide All</button>
+        <button id="firstChild">Hide first Element </button>
+        <button id="lastChild">Hide last Element </button>
+        <button class="links">Hide anchor Tags</button>
+        <button class="Specificlinks">Hide Specific anchor Tags</button>
+        <button class="HideFormInputs">Hide Input types</button>
+        <button id="LongParaHide">Hide the long Para</button>
+        <button id="LongParaShow">Show the long Para</button>
+
+        <script type="text/javaScript">
+        $(document).ready(function () {   
+        //    $("button").click(function(){
+        //        $("h1").hide();
+        //     //    $(".para").hide();
+        //    })
+        })
+
+        $("#HideAll").click(function () {
+            $("*").hide();
+            
+        })
+        $("#lastChild").click(function(){
+            $("ul li:last").hide()
+
+        })
+        // $(".links").click(function(){
+        //     $("[href]").hide()
+        // })
+
+        $(".Specificlinks").click(function(){
+            $("a[target = '_blank']").hide()
+        })
+
+        $(".HideFormInputs").click(function(){
+             $(":text").hide()
+        })
+
+        $("#LongParaHide").click(function(){
+            $("#LongPara").hide(2000);
+        })
+        $("#LongParaShow").click(function(){
+            $("#LongPara").show(3000);          //adding seconds for Animation like slowmotion
+        })
+        $("#ToggleShowHide").click(function(){
+           if($("#shortPara").is (':visible')){
+               $("#shortPara").fadeOut();
+               $(this).val("Show Short Para")
+           }else{
+            $("#shortPara").fadeIn();
+               $(this).val("Hide Short Para")
+           }
+        })
+
+
+        </script>
+    </body>
+   
+</html>

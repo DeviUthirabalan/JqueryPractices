@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+            .panel{
+                background:hotpink;
+            }
+            .flip{
+                background:blue;
+            }
+            .btn{
+                margin:5%;
+                padding:2%;
+                display: inline-block;
+                background:lightblue
+            }
+            body{
+                background:yellow;
+                /* background-repeat:no-repeat;
+                width: 100%; */
+            }
+        </style>
+    </head>
+    <body>
+        <div> <img class="img1" src="Java.jpg"></div>
+        <div><img class="img2" src="JS.png"></div>
+        <div><img class="img3" src="jquery.jfif"></div> 
+        <div class="flip">Click me to read a content.</div>
+        <button type="button" class="btn">Toggle</button>
+        <div class="panel">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae consequuntur blanditiis dolor non! Corporis esse aut natus quidem recusandae, possimus veritatis rerum impedit doloribus blanditiis, aliquid, asperiores vitae. Molestias neque quas eum consectetur voluptatum alias animi blanditiis, veritatis consequatur.</div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("body").click(function(){
+                    for(var i = 0 ; i < 4 ; i ++){
+                    $(".img1").slideUp("slow") 
+                    }
+                //    $(".img2").slideUp("slow") 
+                //    $(".img3").slideUp("slow") 
+                });
+                $(".flip").click(function(){
+                    $(".panel").slideDown("slow")
+                })
+
+            $(".btn").click(function(){
+                $(".panel").slideToggle()
+            })
+            })           
+
+        </script>
+    </body>
+</html>

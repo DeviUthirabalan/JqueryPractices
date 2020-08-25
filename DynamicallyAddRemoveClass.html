@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <style>
+            .changeFont{
+                font-size: 40px;
+                font-weight: bolder;
+            }
+            .changeColor{
+                background-color: lightseagreen;
+            }
+
+        </style>
+        
+        <table>
+           <tr>
+               <th>S.No</th>
+               <th>Name</th>
+               <th>Grade</th>
+           </tr>
+           <tr>
+               <td>1</td>
+               <td>Devi</td>
+               <td>1</td>
+           </tr>
+           <tr>
+            <td>1</td>
+            <td>Devi</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Devi</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Devi</td>
+            <td>1</td>
+        </tr>
+        </table>
+
+      <script type="text/javascript">
+           $(document).ready(function(){
+               $("td th").css("padding","20px")
+               $("tr").addClass("changeFont")
+           })
+
+           $("tr").mouseover(function(){
+               $("th").addClass("changeColor")
+           })
+
+           $("tr").mouseover(function(){
+               $(this).addClass("changeColor")
+           })
+           $("tr").mouseout(function(){
+               $(this).removeClass("changeColor")
+           })
+
+      </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            div{
+                display:inline-block;
+                flex-direction: column;
+            }
+            .box1{
+                
+                height: 200px;
+                width: 200px;
+                background:Red;
+            }
+            .box2{
+                height: 200px;
+                width: 200px;
+                background:green;
+            }
+            .box3{
+                height: 200px;
+                width: 200px;
+                background:skyblue;
+            }
+            .box4{
+                height: 200px;
+                width: 200px;
+                background:hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <button id="FadeOut">FadeOut</button>
+        <button id="FadeTo">FadeTo</button>
+        <button id="FadeToggle">FadeToggle</button>
+        <button id="FadeIn">FadeIn</button>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // alert("hi")
+                $(".box1").fadeTo("slow")
+                $("#FadeOut").click(function(){
+                    $(".box1").fadeOut("slow")     //hide
+            
+                })
+                $("#FadeTo").click(function(){
+                    $(".box2").fadeTo("slow",0.55)
+                })
+
+                $("#FadeToggle").click(function(){
+                    $(".box3").fadeToggle("slow")
+                })
+                $("#FadeIn").click(function(){
+                    $(".box1").fadeIn("slow")
+                })
+            })
+
+        </script>
+    </body>
+</html>
