@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(window).resize(win_resizeVal);
+                $("#body").bind("mousemove",windowAxis)
+            })
+
+            function win_resizeVal(){
+                // alert("ftn")
+               var h = $(window).height() 
+               var w =  $(window).width()
+               $("#status").html("Width : "+ w + "<br>"+" Height : " + h)
+            }
+            function windowAxis(event){
+                 $("#X").html("X axis = " + event.screenX);
+                 $("#Y").html("Y axis =" + event.screenY)
+
+            }
+        </script>
+    </head>
+    <body id="body">
+       <p id="X"></p>
+       <p id="Y"></p>
+        <p id="status">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, incidunt. Incidunt inventore vel placeat at similique obcaecati neque, nam molestiae rerum culpa ipsa consectetur earum illo quia voluptas atque ratione!</p>
+        <p id="status">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, incidunt. Incidunt inventore vel placeat at similique obcaecati neque, nam molestiae rerum culpa ipsa consectetur earum illo quia voluptas atque ratione!</p>
+        <p id="status">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, incidunt. Incidunt inventore vel placeat at similique obcaecati neque, nam molestiae rerum culpa ipsa consectetur earum illo quia voluptas atque ratione!</p>
+        <p id="status">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, incidunt. Incidunt inventore vel placeat at similique obcaecati neque, nam molestiae rerum culpa ipsa consectetur earum illo quia voluptas atque ratione!</p>
+
+    </body>
+</html>

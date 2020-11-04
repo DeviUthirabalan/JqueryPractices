@@ -12,12 +12,19 @@
            <input type="button" id="btn" value="Get the answer">
            <p id="status"></p>
        </div>
+
+       <button id="view">View Data</button>
+       <button id="BindData">Bind Data</button>
+       <button id="UnBinddata">Unbind Data</button>
+       <p id="status2"></p>
+       <p id="para"></p>
        
        <script>
            $(document).ready(function(){
                
-               $("#btn").bind('click',add)
-
+               $("#btn").bind('click',add) 
+                  $("#a").bind("focus",changepara)             //we can bind multiple events
+                  $("#a").bind("blur",keyOut_evt)             
            })
            function add(){
                var c = Number($("#a").val())+Number($("#b").val())
@@ -25,6 +32,30 @@
                $("#btn").val("The answer is")
                $("#status").html(c)
            }
+           function changepara(){
+               $("#status").html("You are typing a value")
+           }
+            function keyOut_evt(){
+                $("#status").html("you are outside of A")
+            }
+       </script>
+       <script>
+           $("#BindData").click(function(){
+               $("#view").bind("click",showpara)
+               $("#status2").html("Data Binded")
+           })
+
+           $("#UnBinddata").click(function(){
+               $("#view").unbind("click",showpara)
+               $("#status2").html("Data Binded")
+           })
+
+           function showpara(){
+                alert("I am a paragraph.................")
+           }
+
+          
+
        </script>
     </body>
 </html>

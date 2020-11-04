@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="SlideUp">SlideUp</button>
+    <button class="SlideDown">SlideDown</button>
+    <button class="SlideToggle">SlideToggle</button>
+    <div class="box1" style="background-color: darkolivegreen;width: 300px;height:300px">Welcome </div>
+
+    <script>
+            $(document).ready(function(){
+                $(".SlideUp").click(function(){
+                    $(".box1").slideUp(1000)
+                })
+
+                $(".SlideDown").click(function(){
+                    $(".box1").slideDown(1000)
+                })
+
+                $(".SlideToggle").click(function(){
+                    $(".box1").slideToggle(1000)
+                })
+            })
+    </script>
+
+
+    
+</body>
+</html>

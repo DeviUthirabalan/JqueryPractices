@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A_Series Even</title>
+    <script>
+        function calculateASeries(){
+            let result = ''
+            let val = document.getElementById("aseries").value
+            if(val % 2 == 0){
+                val-=1 // val = val - 1 
+            }
+            if(val){
+                for(let i = 1 ; i <= val*2 ; i++){
+                    if(i%2 !== 0){
+                        result+=i+' '
+                    }
+                }
+                document.getElementById('result').innerText = result
+            }else{
+                document.getElementById('result').innerText = ''
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <input type="number" name="" min=1  id="aseries">
+    <button onclick="calculateASeries()">Find</button>
+    <p id='result' ></p>
+</body>
+</html>

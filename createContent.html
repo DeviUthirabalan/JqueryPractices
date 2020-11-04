@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <script>
+       $(document).ready(function(){
+           $(".change").click(function(){
+               $("div").text("I'm Replaced text");
+            //    $(".createVar").click(function(){
+            //        var newText = $('.container p:first');
+            //        $(".container p:last").html(newText );
+            //    })
+           })
+
+      })
+  </script>
+  <button class="change">Change text</button>
+  <div>Initial content</div>
+  <div class="container">
+        <button class="createVar">createVar</button>
+
+  <p>1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nisi quod odio, modi illo pariatur?</p>
+  <p>2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nisi quod odio, modi illo pariatur?</p>
+  <p>3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nisi quod odio, modi illo pariatur?</p>
+  <p>4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nisi quod odio, modi illo pariatur?</p>
+  <p>5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nisi quod odio, modi illo pariatur?</p>
+  </div>
+  </html>

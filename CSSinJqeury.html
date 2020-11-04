@@ -2,6 +2,18 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            p{
+                color:brown;
+                font-size:30px
+            }
+            .changeDefault{
+                  font-size:40px;
+                  color:red;
+                  background : yellow;
+
+            }
+        </style>
     </head>
     <body>
         <p>Lorem ipsum dolor sit,<span>Example</span> amet consectetur<span>Example</span> adipisicing elit. Nihil reprehenderit aperiam ab a? Sapiente dolores similique iste labore doloremque tenetur explicabo ipsam totam, suscipit maiores autem quo qui eveniet reprehenderit a pariatur, sed illo dolorum hic? Cum fugit quas beatae.</p>
@@ -28,6 +40,9 @@
                 })
                 $("p:first").css("color","hotpink")
                 $("p span:nth-child(2)").css("color","yellow")
+                $("p").click(function(){
+                    $(this).addClass("changeDefault")
+                })
             })
 
         </script>

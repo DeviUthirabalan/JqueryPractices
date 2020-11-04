@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $(".container p:odd").css("background-color","grey");
+            $("p:first-child").css("background-color","red");
+            $("p:last-of-type").css("background-color","yellow");
+            $("p:contains('Lorem')").css("color","blue");
+            $("p:nth-child(4)").css("background-color","skyblue");
+            
+
+        })
+    </script>
+<div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, numquam, illum quod recusandae minus totam esse cum vel, nulla ipsam repudiandae delectus enim libero consequatur hic exercitationem? Doloremque, corporis ipsum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, numquam, illum quod recusandae minus totam esse cum vel, nulla ipsam repudiandae delectus enim libero consequatur hic exercitationem? Doloremque, corporis ipsum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, numquam, illum quod recusandae minus totam esse cum vel, nulla ipsam repudiandae delectus enim libero consequatur hic exercitationem? Doloremque, corporis ipsum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, numquam, illum quod recusandae minus totam esse cum vel, nulla ipsam repudiandae delectus enim libero consequatur hic exercitationem? Doloremque, corporis ipsum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, numquam, illum quod recusandae minus totam esse cum vel, nulla ipsam repudiandae delectus enim libero consequatur hic exercitationem? Doloremque, corporis ipsum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, numquam, illum quod recusandae minus totam esse cum vel, nulla ipsam repudiandae delectus enim libero consequatur hic exercitationem? Doloremque, corporis ipsum?</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $(".Append").click(function(){
+                $("p:first").append("This text was appended by your click")
+            })
+
+            $(".prepand").click(function(){
+                $("p:first").prepend("This text was prepanded by your click")
+            })
+
+            $(".modify").click(function(){
+                $("p:first").text("This content is modified")
+            })
+
+            $(".toggleClass").click(function(){
+                $("p:first").css("color","yellow")
+            })
+
+            $(".increase").click(function(){
+                $("p:first").css("font-size","+=1px")
+            })
+            $(".decrease").click(function(){
+                $("p:first").css("font-size","-=1px")
+            })
+            
+
+        })
+    </script>
+    <button class="Append">Append</button>
+    <button class="prepand">Prepand</button>
+    <button class="modify">modify</button>
+    <button class="increase">increase</button>
+    <button class="decrease">decrease</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, est.</p>
+    
+</body>
+</html>

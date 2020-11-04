@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEXT Animation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        *{
+            margin:0px;
+            padding:0px
+        }
+        body{
+            background-color:rgb(230, 116, 116);
+        }
+        .text-animation{
+            position: absolute;
+            list-style: none;
+            left:55%;
+            top:50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .am{
+            position: relative;
+             font-size: 40px;
+             opacity: 1;
+             padding-left:30%;
+             padding-top:20%;
+             top:50%;
+             color:black;
+             font-weight: bold;
+             font-style: italic;
+            
+        }
+         .text-animation li ,.text-role li{
+             padding:0;
+             display: inline-block;
+             font-size: 40px;
+             opacity: 1;
+             margin-right: 5px;
+             color:black;
+             transition: all 2.5s ease;
+             font-weight: bold;
+             font-style: italic;
+        }
+        .text-animation  li:last-child , .text-role  li:last-child{
+            display: inline-block;
+             margin-right: 0;
+             
+            
+        }
+        .btn{
+            margin:5%;
+            padding:1%;
+            padding-left:2%;
+            padding-right:2%;
+        }
+
+        .text-animation.hidden{
+             opacity: 1;
+        }
+
+        .text-animation.hidden li:nth-child(1){transform: translateX(-200px) translateY(-200px);}
+        .text-animation.hidden li:nth-child(2){transform: translateX(20px) translateY(100px);}
+        .text-animation.hidden li:nth-child(3){transform: translateX(-180px) translateY(-10px);}
+        .text-animation.hidden li:nth-child(4){transform: translateX(-10px) translateY(-20px);}
+        .text-animation.hidden li:nth-child(5){transform: translateX(-20px) translateY(-180px);}
+        .text-animation.hidden li:nth-child(6){transform: translateX(-10px) translateY(-200px);}
+        .text-animation.hidden li:nth-child(7){transform: translateX(-20px) translateY(-150px);}
+        .text-animation.hidden li:nth-child(8){transform: translateX(-10px) translateY(-200px);}
+        .text-animation.hidden li:nth-child(9){transform: translateX(-20px) translateY(-100px);}
+        .text-animation.hidden li:nth-child(10){transform: translateX(-10px) translateY(-200px);}
+        .text-animation.hidden li:nth-child(11){transform: translateX(-200px) translateY(-200px);}
+        .text-animation.hidden li:nth-child(12){transform: translateX(-40px) translateY(-170px);}
+        .text-animation.hidden li:nth-child(13){transform: translateX(-70px) translateY(-20px);}
+        .text-animation.hidden li:nth-child(14){transform: translateX(-30px) translateY(-60px);}
+        .text-animation.hidden li:nth-child(15){transform: translateX(-300px) translateY(-10px);}
+        .text-role.hidden li:nth-child(16){transform: translateX(-30px) translateY(-80px);}
+        .text-role.hidden li:nth-child(17){transform: translateX(-10px) translateY(-100px);}
+        .text-role.hidden li:nth-child(18){transform: translateX(-80px) translateY(-90px);}
+
+    </style>
+    <script type ="text/javascript">
+        $(function(){
+            setTimeout(function(){
+                $(".text-animation").removeClass("hidden")
+            },500)
+        });
+        $(function(){
+            setTimeout(function(){
+                $(".text-animation").removeClass("hidden")
+            },1000)
+        });
+    </script>
+   
+</head>
+<body>
+    <h3 class="am">I'm</h3>
+    <ul class="text-animation hidden">
+        <li>D</li>
+        <li>e</li>
+        <li>v</li>
+        <li>i</li>
+        &nbsp;
+
+        <li>U</li>
+        <li>t</li>
+        <li>h</li>
+        <li>i</li>
+        <li>r</li>
+        <li>a</li>
+        <li>b</li>
+        <li>a</li>
+        <li>l</li>
+        <li>a</li>
+        <li>n</li><br><br>
+        <div class="text-role">
+            <li>Developer</li>
+            <li>Designer</li>
+            <li>Programmer</li>
+
+        </div>
+
+       
+    </ul>
+    <!-- <button id="green">green</button>
+    <button id="red"> red</button> -->
+     
+    <input type ="button" class ="btn btn-danger" id="btn" style="background-color: rgb(194, 49, 49);" value ="clicked" onclick="clicked()">
+    <!-- <button class ="unclicked btn btn-success">Click me</button> -->
+     <script type="text/javascript">
+    // $("document").ready(function(){
+
+    //     $(".btn btn-danger").click(function(){
+    //         $(".btn btn-danger").val("unclick")
+    //         $(".btn btn-danger").addClass(".btn btn-success")
+    //     })
+    // })
+    </script> 
+
+  <script>
+        // let red = true;
+        // var green = function(){
+        //     document.getElementById("btn").onclick = clicked;
+        //     document.getElementById("btn").value = "click";
+        //     btn.style.backgroundColor = "red";
+        //     console.log('greeen called')
+        // }
+
+        // var clicked = function(){
+ 
+        //  if(true){
+        //     btn.style.backgroundColor = "green";
+        //     document.getElementById("btn").value = "Unclick";
+        //     document.getElementById("btn").onclick = green;
+        //  }else{
+        //     btn.style.backgroundColor = "red";
+        //     document.getElementById("btn").value = "click";
+        //  }
+        // } 
+
+        var clicked = function(){
+            if(document.getElementById('btn').value === 'clicked'){
+                document.getElementById("btn").value = "Unclick";
+                btn.style.backgroundColor = "green";
+            }else {
+                document.getElementById("btn").value = "clicked";
+                btn.style.backgroundColor = "red";
+            }
+        }
+
+
+
+
+        // function clicked(btn){
+        //     btn.style.backgroundColor = "green";
+        //     document.getElementById("btn").value = "unclick";
+        //     // if(btn.style.backgroundColor = "green"){
+        //     //     btn.style.backgroundColor = "red";
+        //     // document.getElementById("btn").value = "click";
+        //     // }
+        //     // else if(btn.style.backgroundColor = "red"){
+        //     //     btn.style.backgroundColor = "green";
+        //     // document.getElementById("btn").value = "unclick";
+        //     // }
+        // }
+
+
+//    function clicked(){
+//            if(btn.value == "clicked"){
+//             btn.style.backgroundColor = "green";
+//             document.getElementById("btn").value = "unclick";
+//            }
+//            else if(btn.value == "unclicked"){
+//             btn.style.backgroundColor = "red";
+//             document.getElementById("btn").value = "clicked";
+//            }
+//    }
+
+
+    //  function clicked(){
+    //      if(btn.backgroundcolor == "green"){
+    //         btn.style.backgroundColor = "red";
+    //         document.getElementById("btn").value = "clicked";
+    //      }
+    //      else if(btn.backgroundcolor == "red"){
+    //         btn.style.backgroundColor = "green";
+    //         document.getElementById("btn").value = "unclick";
+    //      }
+    //  }
+    </script>
+</body>
+</html>

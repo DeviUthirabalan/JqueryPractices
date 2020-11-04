@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function calculate(operation){
+            let a = parseInt(document.getElementById('inputValue1').value)
+            let b = parseInt(document.getElementById('inputValue2').value)
+            let result = 0
+            switch(operation){
+                case 'add': result = (a+b);break;
+                case 'sub': result = (a-b);break;
+                case 'mul': result = (a*b);break;
+                case 'div': result = (a/b);break;
+                default: break;
+            }
+            if(result || result == 0){
+                document.getElementById('result').innerText ='Result = ' + result
+            }else{
+                document.getElementById('result').innerText = ''
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" name="" id="inputValue1">
+    <input type="number" name="" id="inputValue2"> &nbsp;&nbsp;
+    <button onclick="calculate('add')">+</button>
+    <button onclick="calculate('sub')">-</button>
+    <button onclick="calculate('mul')">x</button>
+    <button onclick="calculate('div')">/</button><br>
+    <p id='result'></p>
+</body>
+</html>

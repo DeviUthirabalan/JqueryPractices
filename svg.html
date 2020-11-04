@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <svg height="200px" width="200px" style="background: black;" border>
+           <circle cx="100" cy="100" r="100" stroke ="green" stroke-width =" 12px" fill ="yellow"/>
+        </svg>
+      <svg>  <rect cx="100" cy="100" width="100" height="100" stroke ="green" stroke-width =" 12px" fill ="yellow"/></svg>
+        
+        <button id="increase">Increase</button>
+        <button id="decrease">Decrease</button>
+        <button id="default">Default</button>
+        <script>
+            $(document).ready(function(){
+                $("svg").mouseover(function(){
+                    $("circle").attr('fill' ,'hotpink')
+                })
+                $("svg").mouseout(function(){
+                    $("circle").attr('fill' ,'yellow')
+                })
+                $("#increase").click(function(){
+                    $("rect").attr("fill" ,"purple")
+                    $("rect").attr("width" ,"700")
+                    $("rect").attr("height" ,"500")
+                })
+                $("#decrease").click(function(){
+                    $("rect").attr("fill" ,"purple")
+                    $("rect").attr("width" ,"70")
+                    $("rect").attr("height" ,"70")
+                })
+                // $("#default").click(function(){   doubt
+                   
+                // })
+            })
+        </script>
+
+    </body>
+</html>
